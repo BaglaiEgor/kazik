@@ -1,0 +1,44 @@
+﻿<Page x:Class="kazik.Pages.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kazik"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Login">
+
+    <Grid>
+        <Frame x:Name="LoginFrame" Content ="LoginFrame" Background="white"/>
+        <Image Source="/Image2.png" Stretch="Fill" Height="1080" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1920" Loaded="Image_Loaded"/>
+        <Rectangle HorizontalAlignment="Center" Height="800" Stroke="Black" VerticalAlignment="Center" Width="550" Fill="#FF243C46">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FF96A0A0" ShadowDepth="0" BlurRadius="200" Opacity="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <ui:TextBlock HorizontalAlignment="Center" Margin="0,182,0,0" TextWrapping="Wrap" Text="Вход" VerticalAlignment="Top" Height="40" Width="62" FontSize="28">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="#FF96A0A0" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <TextBox x:Name="txtName" HorizontalAlignment="Center" Margin="0,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284" SelectionChanged="txtName_SelectionChanged"/>
+        <ui:PasswordBox x:Name="txtPass" HorizontalAlignment="Center" Margin="0,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Height="40" SelectionChanged="txtPass_SelectionChanged"/>
+        <ui:Button x:Name="buttLog" Content="Вход" HorizontalAlignment="Center" Margin="0,660,0,0" VerticalAlignment="Top" Height="96" Width="284" Click="buttLog_Click" IsEnabled="False"/>
+        <Button x:Name="buttReg" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,772,0,0" VerticalAlignment="Top" Height="27" Width="122" Click="buttReg_Click"/>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="818,256,0,0" TextWrapping="Wrap" Text="Логин или почта" VerticalAlignment="Top" Height="26" Width="173" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="#FF96A0A0" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="818,343,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Height="26" Width="117" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="#FF96A0A0" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <Image x:Name="qrCodeImage" Width="200" Height="200" Margin="1649,741,71,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="code" HorizontalAlignment="Left" Margin="1649,950,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="40" SelectionChanged="code_SelectionChanged"/>
+        <ui:Button x:Name="admin" Content="Button" HorizontalAlignment="Left" Margin="1649,1000,0,0" VerticalAlignment="Top" Width="200" Height="40" IsEnabled="False" Click="Button_Click"/>
+
+    </Grid>
+</Page>

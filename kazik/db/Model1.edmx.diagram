@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="417aee3f521d467a9cc0dc07f2992086" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="KazinoXDModel.Bets" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoXDModel.GameHistory" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoXDModel.Games" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoXDModel.Results" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoXDModel.Sessions" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoXDModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoXDModel.Transactions" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoXDModel.Users" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="KazinoXDModel.FK_Bets_Games" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoXDModel.FK_Bets_Sessions" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoXDModel.FK_GameHistory_Bets" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoXDModel.FK_Results_Bets" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoXDModel.FK_GameHistory_Games" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoXDModel.FK_GameHistory_Results" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoXDModel.FK_GameHistory_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoXDModel.FK_Sessions_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoXDModel.FK_Transactions_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

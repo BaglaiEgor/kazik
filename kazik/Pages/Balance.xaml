@@ -1,0 +1,42 @@
+﻿<Page x:Class="kazik.Pages.Balance"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kazik.Pages"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Balance">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="193*"/>
+            <RowDefinition Height="347*"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="BalanceFrame" Content ="BalanceFrame" Background="white" Grid.RowSpan="2"/>
+        <Image Source="/Image1.png" HorizontalAlignment="Center" Width="1920" Height="1080" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <Rectangle HorizontalAlignment="Right" Stroke="Black" Width="346" Margin="0,0,1574,0" Fill="#FF210420" Height="1070" VerticalAlignment="Top" Grid.RowSpan="2">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FF1D031C" ShadowDepth="0" BlurRadius="200" Opacity="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Button Content="Профиль" HorizontalAlignment="Left" Margin="94,106,0,0" VerticalAlignment="Top" Height="35" Width="158" Click="Button_Click"/>
+        <Button Content="Баланс" HorizontalAlignment="Left" Margin="94,306,0,0" VerticalAlignment="Top" Height="34" Width="158"/>
+        <Button Content="Игры" HorizontalAlignment="Left" Margin="94,202,0,0" VerticalAlignment="Top" Height="35" Width="158" Click="Button_Click_3"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="94,565,0,0" VerticalAlignment="Top" Height="35" Width="158" Click="Button_Click_4" Grid.Row="1"/>
+
+        <ui:TextBlock HorizontalAlignment="Left" Margin="94,25,0,0" TextWrapping="Wrap" Text="BlackAlmaZ" VerticalAlignment="Top" Height="52" Width="164" FontSize="28" Foreground="#FFDF93D8">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="#FF96A0A0" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="909,34,0,0" TextWrapping="Wrap" Text="Баланс" VerticalAlignment="Top" Height="60" Width="204" FontSize="40" Foreground="White"/>
+        <ui:TextBox x:Name="txtBalanceUp" HorizontalAlignment="Left" Margin="863,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284" Grid.Row="1"/>
+        <ui:Button Content="Пополнить" HorizontalAlignment="Left" Margin="863,134,0,0" VerticalAlignment="Top" Height="40" Width="284" Click="Button_Click_1" Grid.Row="1" />
+        <ui:TextBlock Name="txtBalance" HorizontalAlignment="Left" Margin="1076,34,0,0" TextWrapping="Wrap" FontSize="40"  VerticalAlignment="Top" Width="349" Height="60" Loaded="txtBalance_Loaded"  Foreground="White"/>
+        <ui:Button Content="Снять" HorizontalAlignment="Left" Margin="863,195,0,0" VerticalAlignment="Top" Width="284" Height="40" Click="Button_Click_2" Grid.Row="1"/>
+        <Image x:Name="qrCodeImage" Width="200" Height="200" Margin="1395,0,325,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <ui:Button Content="История транкзаций" HorizontalAlignment="Left" Margin="1718,55,0,0" VerticalAlignment="Top" Height="35" Width="158" Click="Button_Click_6"/>
+    </Grid>
+</Page>

@@ -1,0 +1,26 @@
+﻿<Page x:Class="kazik.Pages.History"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kazik.Pages"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="History">
+
+    <Grid>
+        <Frame x:Name="HistoryFrame" Content ="HistoryFrame" Background="white"/>
+        <ListView Grid.Row="1" Name="ListUsers" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TransactionID}" Width="550" Header="TransactionID"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=UserID}" Width="500" Header="UserID"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TransactionAmount}" Width="500" Header="TransactionAmount"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TransactionType}" Width="500" Header="TransactionType"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ui:Button Content="Назад" Margin="0,954,1231,0" Click="Button_Click"/>
+    </Grid>
+</Page>

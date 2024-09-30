@@ -1,0 +1,30 @@
+﻿<Page x:Class="kazik.Pages.GamesHistory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kazik.Pages"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="GamesHistory">
+
+    <Grid>
+        <Frame x:Name="GameHistoryFrame" Content ="GameHistoryFrame" Background="white"/>
+        <ListView Grid.Row="1" Name="ListHistory" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=HistoryID}" Width="320" Header="HistoryID"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=BetSum}" Width="320" Header="Bet Sum"/>
+                    <!-- Сумма ставки -->
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ResultSum}" Width="320" Header="Result Sum"/>
+                    <!-- Сумма выигрыша -->
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=GameName}" Width="320" Header="Game Name"/>
+                    <!-- Имя игры -->
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=PlayedAt}" Width="320" Header="Played At"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ui:Button Content="Назад" Margin="0,954,1231,0" Click="Button_Click"/>
+    </Grid>
+</Page>
